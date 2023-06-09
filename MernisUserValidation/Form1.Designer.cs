@@ -29,14 +29,14 @@
 		private void InitializeComponent()
 		{
 			panel1 = new Panel();
+			button2 = new Button();
 			label1 = new Label();
 			textBox1 = new TextBox();
 			label2 = new Label();
 			textBox2 = new TextBox();
 			textBox3 = new TextBox();
 			monthCalendar1 = new MonthCalendar();
-			button1 = new Button();
-			button2 = new Button();
+			Validate = new Button();
 			panel1.SuspendLayout();
 			SuspendLayout();
 			// 
@@ -49,6 +49,16 @@
 			panel1.Name = "panel1";
 			panel1.Size = new Size(342, 42);
 			panel1.TabIndex = 0;
+			// 
+			// button2
+			// 
+			button2.Location = new Point(294, 9);
+			button2.Name = "button2";
+			button2.Size = new Size(36, 23);
+			button2.TabIndex = 7;
+			button2.Text = "X";
+			button2.UseVisualStyleBackColor = true;
+			button2.Click += button2_Click;
 			// 
 			// label1
 			// 
@@ -106,24 +116,15 @@
 			monthCalendar1.Name = "monthCalendar1";
 			monthCalendar1.TabIndex = 5;
 			// 
-			// button1
+			// Validate
 			// 
-			button1.Location = new Point(208, 463);
-			button1.Name = "button1";
-			button1.Size = new Size(122, 23);
-			button1.TabIndex = 6;
-			button1.Text = "Kontrol Et";
-			button1.UseVisualStyleBackColor = true;
-			// 
-			// button2
-			// 
-			button2.Location = new Point(294, 9);
-			button2.Name = "button2";
-			button2.Size = new Size(36, 23);
-			button2.TabIndex = 7;
-			button2.Text = "X";
-			button2.UseVisualStyleBackColor = true;
-			button2.Click += button2_Click;
+			Validate.Location = new Point(208, 463);
+			Validate.Name = "Validate";
+			Validate.Size = new Size(122, 23);
+			Validate.TabIndex = 6;
+			Validate.Text = "Kontrol Et";
+			Validate.UseVisualStyleBackColor = true;
+			Validate.Click += Validate_Click;
 			// 
 			// Form1
 			// 
@@ -131,7 +132,7 @@
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.White;
 			ClientSize = new Size(342, 498);
-			Controls.Add(button1);
+			Controls.Add(Validate);
 			Controls.Add(monthCalendar1);
 			Controls.Add(textBox3);
 			Controls.Add(textBox2);
@@ -158,6 +159,6 @@
 		private TextBox textBox3;
 		private Button button2;
 		private MonthCalendar monthCalendar1;
-		private Button button1;
+		private Button Validate;
 	}
 }
