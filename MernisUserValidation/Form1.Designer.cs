@@ -31,12 +31,12 @@
 			panel1 = new Panel();
 			button2 = new Button();
 			label1 = new Label();
-			textBox1 = new TextBox();
+			NationalityId = new TextBox();
 			label2 = new Label();
-			textBox2 = new TextBox();
-			textBox3 = new TextBox();
-			monthCalendar1 = new MonthCalendar();
+			FirstName = new TextBox();
+			LastName = new TextBox();
 			Validate = new Button();
+			BirthOfYear = new DateTimePicker();
 			panel1.SuspendLayout();
 			SuspendLayout();
 			// 
@@ -70,15 +70,15 @@
 			label1.TabIndex = 0;
 			label1.Text = "Mernis User Validation Control";
 			// 
-			// textBox1
+			// NationalityId
 			// 
-			textBox1.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			textBox1.Location = new Point(49, 133);
-			textBox1.MaxLength = 11;
-			textBox1.Name = "textBox1";
-			textBox1.PlaceholderText = "TC Kimlik Numarası";
-			textBox1.Size = new Size(234, 27);
-			textBox1.TabIndex = 1;
+			NationalityId.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			NationalityId.Location = new Point(49, 133);
+			NationalityId.MaxLength = 11;
+			NationalityId.Name = "NationalityId";
+			NationalityId.PlaceholderText = "TC Kimlik Numarası";
+			NationalityId.Size = new Size(234, 27);
+			NationalityId.TabIndex = 1;
 			// 
 			// label2
 			// 
@@ -90,31 +90,25 @@
 			label2.TabIndex = 2;
 			label2.Text = "MERNİS";
 			// 
-			// textBox2
+			// FirstName
 			// 
-			textBox2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			textBox2.Location = new Point(49, 185);
-			textBox2.MaxLength = 11;
-			textBox2.Name = "textBox2";
-			textBox2.PlaceholderText = "Adınız";
-			textBox2.Size = new Size(234, 27);
-			textBox2.TabIndex = 3;
+			FirstName.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			FirstName.Location = new Point(49, 185);
+			FirstName.MaxLength = 100;
+			FirstName.Name = "FirstName";
+			FirstName.PlaceholderText = "Adınız";
+			FirstName.Size = new Size(234, 27);
+			FirstName.TabIndex = 3;
 			// 
-			// textBox3
+			// LastName
 			// 
-			textBox3.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-			textBox3.Location = new Point(49, 239);
-			textBox3.MaxLength = 11;
-			textBox3.Name = "textBox3";
-			textBox3.PlaceholderText = "Soyadınız";
-			textBox3.Size = new Size(234, 27);
-			textBox3.TabIndex = 4;
-			// 
-			// monthCalendar1
-			// 
-			monthCalendar1.Location = new Point(49, 278);
-			monthCalendar1.Name = "monthCalendar1";
-			monthCalendar1.TabIndex = 5;
+			LastName.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			LastName.Location = new Point(49, 239);
+			LastName.MaxLength = 100;
+			LastName.Name = "LastName";
+			LastName.PlaceholderText = "Soyadınız";
+			LastName.Size = new Size(234, 27);
+			LastName.TabIndex = 4;
 			// 
 			// Validate
 			// 
@@ -126,18 +120,25 @@
 			Validate.UseVisualStyleBackColor = true;
 			Validate.Click += Validate_Click;
 			// 
+			// BirthOfYear
+			// 
+			BirthOfYear.Location = new Point(49, 287);
+			BirthOfYear.Name = "BirthOfYear";
+			BirthOfYear.Size = new Size(234, 23);
+			BirthOfYear.TabIndex = 7;
+			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.White;
 			ClientSize = new Size(342, 498);
+			Controls.Add(BirthOfYear);
 			Controls.Add(Validate);
-			Controls.Add(monthCalendar1);
-			Controls.Add(textBox3);
-			Controls.Add(textBox2);
+			Controls.Add(LastName);
+			Controls.Add(FirstName);
 			Controls.Add(label2);
-			Controls.Add(textBox1);
+			Controls.Add(NationalityId);
 			Controls.Add(panel1);
 			FormBorderStyle = FormBorderStyle.None;
 			Name = "Form1";
@@ -153,12 +154,12 @@
 
 		private Panel panel1;
 		private Label label1;
-		private TextBox textBox1;
+		private TextBox NationalityId;
 		private Label label2;
-		private TextBox textBox2;
-		private TextBox textBox3;
+		private TextBox FirstName;
+		private TextBox LastName;
 		private Button button2;
-		private MonthCalendar monthCalendar1;
 		private Button Validate;
+		private DateTimePicker BirthOfYear;
 	}
 }
