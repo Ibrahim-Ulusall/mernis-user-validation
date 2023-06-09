@@ -1,5 +1,6 @@
 ﻿using DataAccess.Abstract;
 using Entities.Concrete;
+using Business.Adapter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,30 @@ namespace DataAccess.Concrete.EntityFramework
 {
 	public class EfCustomerDal : IEfCustomerService
 	{
-		public void Add(Customer entity)
+		public string Result = "";
+		IMicroServiceValidation _validation;
+
+		public EfCustomerDal(IMicroServiceValidation validation)
 		{
-			throw new NotImplementedException();
+			_validation = validation;
+		}
+		
+
+		public async Task Add(Customer customer)
+		{
+			bool isValid = await _validation.Validate(customer);
+
+			if (isValid)
+			{
+				Result = "Kullanıcı Doğrulandı! " +  customer.CustomerFirstName;
+			}
+			else
+			{
+				Result = "Kullanıcı Doğrulanamadı";
+			}
 		}
 
-		public void Delete(Customer entity)
+		public void Delete(Customer customer)
 		{
 			throw new NotImplementedException();
 		}
@@ -31,7 +50,7 @@ namespace DataAccess.Concrete.EntityFramework
 			throw new NotImplementedException();
 		}
 
-		public void Update(Customer entity)
+		public void Update(Customer customer)
 		{
 			throw new NotImplementedException();
 		}

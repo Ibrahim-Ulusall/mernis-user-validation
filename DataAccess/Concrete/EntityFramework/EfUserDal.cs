@@ -11,7 +11,7 @@ namespace DataAccess.Concrete.EntityFramework
 {
 	public class EfUserDal : IEfUserService
 	{
-		public void Add(User entity)
+		public Task Add(User entity)
 		{
 			throw new NotImplementedException();
 		}

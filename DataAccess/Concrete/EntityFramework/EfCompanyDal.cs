@@ -11,7 +11,7 @@ namespace DataAccess.Concrete.EntityFramework
 {
 	public class EfCompanyDal : IEfCompanyService
 	{
-		public void Add(Company entity)
+		public Task Add(Company entity)
 		{
 			throw new NotImplementedException();
 		}

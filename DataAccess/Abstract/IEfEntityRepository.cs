@@ -10,7 +10,7 @@ namespace DataAccess.Abstract
 {
 	public interface IEfEntityRepository<T> where T: class, IEntity,new()
 	{
-		void Add(T entity);
+		Task Add(T entity);
 		void Delete(T entity);
 		void Update(T entity);
 		List<T> GetAll(Expression<Func<T, bool>> filter = null);
